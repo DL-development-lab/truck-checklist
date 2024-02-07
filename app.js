@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3306;
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
@@ -11,12 +11,12 @@ app.get('/', seuController.index);
 const db = require('./models');
 db.sequelize.sync()
   .then(() => {
-    console.log('Banco de dados sincronizado com sucesso');
+    console.log('Database created');
   })
   .catch((error) => {
-    console.error('Erro ao sincronizar o banco de dados:', error);
+    console.error('Error synching the DB:', error);
   });
 
 app.listen(port, () => {
-  console.log(`Servidor rodando em http://localhost:${port}`);
+  console.log(`Server running in http://localhost:${port}`);
 });

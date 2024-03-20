@@ -5,7 +5,7 @@ const authController = require('../controllers/authController');
 const router = express.Router();
 
 router.get('/', mainController.getHomePage); //TODO: DELETE
-router.post('/api/signup', authController.signup)
+router.post('/api/signup', authController.signup);
 
 
 module.exports = router;

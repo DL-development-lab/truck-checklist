@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Button, TextField, Typography, Container } from '@material-ui/core';
+import { Button, TextField, Typography, Container } from '@mui/material';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
